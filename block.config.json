@@ -3,8 +3,8 @@
   "type": "containerized",
   "blockId": "oA44il6P23D_2GWiLFpn42",
   "source": {
-    "https": "",
-    "ssh": "",
+    "https": "https://github.com/neoito-hub/chat_app.git",
+    "ssh": "git@github.com:neoito-hub/chat_app.git",
     "branch": "block_chat_app"
   },
   "parentBlockIDs": [],
