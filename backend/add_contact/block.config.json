@@ -1,0 +1,20 @@
+{
+  "blockId": "Kj0Cr6OPpmvkZKy5o5zwJ",
+  "name": "add_contact",
+  "type": "function",
+  "source": {
+    "https": null,
+    "ssh": null,
+    "branch": "block_add_contact"
+  },
+  "parentBlockIDs": [
+    "O_uBakhfg8DQ_gzQkofhy"
+  ],
+  "repoType": "mono",
+  "language": "nodejs",
+  "supportedAppblockVersions": [
+    "1.0.0"
+  ],
+  "isPublic": true,
+  "start": "node index.js"
+}

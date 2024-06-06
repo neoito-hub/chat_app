@@ -1,0 +1,20 @@
+{
+  "blockId": "XcyYff4uLqGjekUtcyYb5",
+  "name": "get_template_details_by_id",
+  "type": "function",
+  "source": {
+    "https": null,
+    "ssh": null,
+    "branch": "block_get_template_details_by_id"
+  },
+  "parentBlockIDs": [
+    "O_uBakhfg8DQ_gzQkofhy"
+  ],
+  "repoType": "mono",
+  "language": "nodejs",
+  "supportedAppblockVersions": [
+    "1.0.0"
+  ],
+  "isPublic": true,
+  "start": "node index.js"
+}

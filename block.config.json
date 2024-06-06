@@ -1,0 +1,17 @@
+{
+  "name": "chat_app",
+  "type": "containerized",
+  "blockId": "oA44il6P23D_2GWiLFpn42",
+  "source": {
+    "https": "",
+    "ssh": "",
+    "branch": "block_chat_app"
+  },
+  "parentBlockIDs": [],
+  "isPublic": true,
+  "supportedAppblockVersions": [
+    "1.0.0"
+  ],
+  "repoType": "mono",
+  "language": "nodejs"
+}

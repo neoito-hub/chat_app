@@ -1,0 +1,20 @@
+{
+  "blockId": "oA4WEvY5XqwB7YGI9TFxQ",
+  "name": "list_category",
+  "type": "function",
+  "source": {
+    "https": null,
+    "ssh": null,
+    "branch": "block_list_category"
+  },
+  "parentBlockIDs": [
+    "O_uBakhfg8DQ_gzQkofhy"
+  ],
+  "repoType": "mono",
+  "language": "nodejs",
+  "supportedAppblockVersions": [
+    "1.0.0"
+  ],
+  "isPublic": true,
+  "start": "node index.js"
+}

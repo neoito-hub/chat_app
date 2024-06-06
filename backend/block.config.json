@@ -1,0 +1,75 @@
+{
+  "name": "backend",
+  "type": "package",
+  "blockId": "O_uBakhfg8DQ_gzQkofhy",
+  "source": {
+    "https": null,
+    "ssh": null,
+    "branch": "block_backend"
+  },
+  "parentBlockIDs": [],
+  "isPublic": true,
+  "supportedAppblockVersions": [
+    "1.0.0"
+  ],
+  "repoType": "mono",
+  "dependencies": {
+    "shared": {
+      "directory": "shared"
+    },
+    "send_message": {
+      "directory": "send_message"
+    },
+    "create_template": {
+      "directory": "create_template"
+    },
+    "send_template_message": {
+      "directory": "send_template_message"
+    },
+    "send_media_message": {
+      "directory": "send_media_message"
+    },
+    "send_text_message": {
+      "directory": "send_text_message"
+    },
+    "send_broadcast": {
+      "directory": "send_broadcast"
+    },
+    "chat_list": {
+      "directory": "chat_list"
+    },
+    "chat_history": {
+      "directory": "chat_history"
+    },
+    "get_token": {
+      "directory": "get_token"
+    },
+    "add_contact": {
+      "directory": "add_contact"
+    },
+    "list_contact": {
+      "directory": "list_contact"
+    },
+    "list_template": {
+      "directory": "list_template"
+    },
+    "file_upload": {
+      "directory": "file_upload"
+    },
+    "list_broadcast": {
+      "directory": "list_broadcast"
+    },
+    "list_category": {
+      "directory": "list_category"
+    },
+    "list_language": {
+      "directory": "list_language"
+    },
+    "get_template_details_by_id": {
+      "directory": "get_template_details_by_id"
+    },
+    "edit_template": {
+      "directory": "edit_template"
+    }
+  }
+}

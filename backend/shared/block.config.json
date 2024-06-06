@@ -1,0 +1,20 @@
+{
+  "blockId": "IB4_6FEHEVtshtwddQnR2",
+  "name": "shared",
+  "type": "shared-fn",
+  "source": {
+    "https": null,
+    "ssh": null,
+    "branch": "block_shared"
+  },
+  "parentBlockIDs": [
+    "O_uBakhfg8DQ_gzQkofhy"
+  ],
+  "repoType": "mono",
+  "language": "nodejs",
+  "supportedAppblockVersions": [
+    "1.0.0"
+  ],
+  "isPublic": true,
+  "start": "node index.js"
+}
