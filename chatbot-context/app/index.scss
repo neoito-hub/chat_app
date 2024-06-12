@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+
+.font-noto-sans {
+  font-family: "Noto Sans", sans-serif;
+}
+.font-roboto {
+  font-family: "Roboto", sans-serif;
+}
+.custom-scroll-bar {
+  &::-webkit-scrollbar {
+    width: 5px;
+    height: 2px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #c2c2c2;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #bcbdbe;
+  }
+}
+// .breadcrumb {
+//   a:not(:last-of-type):after {
+//     content: "";
+//     width: 12px;
+//     height: 10px;
+//     background: url(./assets/img/icons/breadcrumb-arrow.svg) no-repeat center
+//       center;
+//     display: inline-block;
+//     margin: 0px 10px;
+//   }
+// }
+.chatBoxUser {
+  &:after {
+    content: "";
+    border: 12px solid #e5e5e5;
+    border-top-right-radius: 8px;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+    position: absolute;
+    top: 0;
+    right: -14px;
+  }
+}
+.chatBoxAi {
+  &:after {
+    content: "";
+    border: 12px solid #e3d9ff;
+    border-top-left-radius: 8px;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    position: absolute;
+    top: 0;
+    left: -14px;
+  }
+}
+@keyframes TypingAnimation {
+  0% {
+    transform: translateY(0px);
+    background-color: #878787cc;
+  }
+  28% {
+    transform: translateY(-2px);
+    background-color: #87878793;
+  }
+  44% {
+    transform: translateY(0px);
+    background-color: #878787cc;
+  }
+}
+
+.typing {
+  align-items: center;
+  display: flex;
+  &.typing-xs {
+    .typing-dot {
+      height: 2px;
+      margin-right: 2px;
+      width: 2px;
+    }
+  }
+  .typing-dot {
+    animation: TypingAnimation 1.8s infinite ease-in-out;
+    background-color: #878787;
+    border-radius: 100%;
+    vertical-align: middle;
+    display: inline-block;
+    &:nth-child(1) {
+      animation-delay: 100ms;
+    }
+    &:nth-child(2) {
+      animation-delay: 200ms;
+    }
+    &:nth-child(3) {
+      animation-delay: 300ms;
+    }
+    &:last-child {
+      margin-right: 0 !important;
+    }
+  }
+}
+
+@-webkit-keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.2, 0.2, 0.2);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.2, 0.2, 0.2);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+.chat-msg-animation {
+  -webkit-animation: zoomIn 0.3s ease forwards;
+  animation: zoomIn 0.3s ease forwards;
+}
+
+.breadcrumb-triangle {
+  li {
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 100%;
+      content: "";
+      height: 100%;
+      width: 0;
+      border: 28px solid transparent;
+      border-right-width: 0;
+      border-left-width: 22px;
+      z-index: 2;
+      border-left-color: #dfe1ef;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      width: 34px;
+      height: 100%;
+      left: 100%;
+      top: 0;
+      background-color: #fff;
+      clip-path: polygon(38% 0, 92% 50%, 38% 100%, 3% 100%, 60% 50%, 6% 0);
+      z-index: 3;
+      margin-left: -4px;
+    }
+    &:last-of-type {
+      &::after {
+        display: none;
+      }
+    }
+    &.active-breadcrumb {
+      color: #fff;
+      background-color: #5e5edd;
+      &:after {
+        border-left-color: #5e5edd;
+      }
+    }
+  }
+}
+
+.btn-primary {
+  background-color: #5e5edd;
+  color: white;
+  padding: 0.5rem 1rem;
+  // font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  &:hover {
+    background-color: #5e5eddd8;
+  }
+}
+
+input.peer:checked + .filter-radio {
+  border-color: #6f42c1;
+  border-width: 5px;
+}
+
+input.peer:checked + .chkbox-icon {
+  background: url("/assets/img/icons/tick.svg") no-repeat center center #5e5edd;
+}
+input.peer:checked + .no-bg-chkbox {
+  background: url("/assets/img/icons/tick-black.svg") no-repeat center center;
+}

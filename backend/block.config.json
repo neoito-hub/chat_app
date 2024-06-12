@@ -70,6 +70,9 @@
     },
     "edit_template": {
       "directory": "edit_template"
+    },
+    "ai_chat": {
+      "directory": "ai_chat"
     }
   }
 }

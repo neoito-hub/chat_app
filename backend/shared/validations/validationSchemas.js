@@ -61,6 +61,10 @@ const paginationAndSearchSchema = vine.object({
   search: vine.string(),
   project_id: vine.string()
 });
+const aiChatSchema = vine.object({
+  question: vine.string(),
+  history: vine.string().optional()
+});
 export default {
   addContactSchema,
   chatHistorySchema,
@@ -70,5 +74,6 @@ export default {
   sendTemplateSchema,
   sendtextMessageSchema,
   newBroadcast,
-  paginationAndSearchSchema
+  paginationAndSearchSchema,
+  aiChatSchema
 };

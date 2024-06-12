@@ -28,7 +28,7 @@ const listContactSchema = vine.object({
   page_number: vine.number(),
   limit: vine.number(),
   search: vine.string().nullable().optional(),
-  project_id :vine.string()
+  project_id: vine.string(),
 })
 
 const createTemplateSchema = vine.object({
@@ -71,6 +71,11 @@ const paginationAndSearchSchema = vine.object({
   project_id: vine.string(),
 })
 
+const aiChatSchema = vine.object({
+  question: vine.string(),
+  history: vine.string().optional(),
+})
+
 export default {
   addContactSchema,
   chatHistorySchema,
@@ -80,5 +85,6 @@ export default {
   sendTemplateSchema,
   sendtextMessageSchema,
   newBroadcast,
-  paginationAndSearchSchema
+  paginationAndSearchSchema,
+  aiChatSchema,
 }

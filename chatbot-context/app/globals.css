@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.breadcrumb a:not(:last-of-type):after {
+  content: "";
+  width: 12px;
+  height: 10px;
+  background: url(./assets/img/icons/breadcrumb-arrow.svg) no-repeat center
+    center;
+  display: inline-block;
+  margin: 0px 10px;
+}
+.search-input-white {
+  background: url("./assets/img/icons/search-gray.svg") no-repeat left 10px
+    center#fff;
+}
+.btn-primary {
+  @apply bg-primary text-white px-5 py-1.5 rounded font-bold text-center cursor-pointer transition-all hover:bg-opacity-80;
+}
+.info-group span:not(:last-of-type):after {
+  content: "";
+  width: 4px;
+  height: 4px;
+  margin: 2px 8px;
+  display: inline-block;
+  border-radius: 100%;
+  background: rgba(64, 64, 64, 0.5);
+}
+input:checked ~ .chkbox-tick {
+  background: url(../app/assets/img/icons/tick.svg) no-repeat center #5e5edd;
+}
+
+.nav-menu-wrapper {
+  @apply w-64 md-lt:fixed md-lt:h-[calc(100vh-64px)] md-lt:overflow-y-auto md-lt:overflow-x-hidden md-lt:px-3 md-lt:border-l md-lt:border-ab-gray-medium md-lt:basis-full top-16 md:flex items-center md:w-auto md-lt:dark:bg-[#110D17] md-lt:overflow-hidden md-lt:transition-all md-lt:!duration-500 md-lt:ease-linear;
+}

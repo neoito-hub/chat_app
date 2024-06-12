@@ -1,5 +1,14 @@
 version: "3.8"
 services:
+  qdrant:
+    image: qdrant/qdrant
+    container_name: chatbot_qdrant_container
+    environment:
+      - QDRANT_COLLECTION_NAME=test_collection_1
+    ports:
+      - "6333:6333"
+      - "6334:6334"
+
   postgres:
     image: postgres:latest
     container_name: chat_app_postgres_container
@@ -38,6 +47,23 @@ services:
       interval: 5s
       timeout: 3s
       retries: 5
+  chatbot-context:
+    image: chatbot_context
+    container_name: chatbot_context_container
+    build:
+      context: chatbot-context
+      # target: dev
+      dockerfile: Dockerfile
+    volumes:
+      - ./chatbot-context:/app
+      - /app/node_modules
+    ports:
+      - "3011:3011"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    command: bash -c "npx prisma generate --schema=./utils/prisma/schema.prisma && npx prisma db push --schema=./utils/prisma/schema.prisma && pm2-runtime start ./ecosystem.config.js"
+
   shield-go-app:
     build: ./shield
     container_name: chat_app_shield_app_container

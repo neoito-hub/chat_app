@@ -1,0 +1,50 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model project {
+  id              String    @id @default(uuid())
+  domains         String[]
+  status          Int // 1 for active and 2 for inactive
+  name            String?
+  category        String
+  created_at      DateTime? @default(now())
+  updated_at      DateTime? @updatedAt
+  collection_name String?
+  user_id         String
+  description     String @default("")
+
+  chat_context chat_context[] @relation("chat_context_project_id")
+
+  // @@unique([domain], name: "domainIdentifier")
+  @@unique([name], name: "userProjectsIdentifier")
+}
+
+model chat_context {
+  id         String    @id @default(uuid())
+  created_at DateTime? @default(now())
+  updated_at DateTime? @updatedAt
+  project_id String
+
+  project project @relation("chat_context_project_id", fields: [project_id], references: [id])
+
+  messages messages[] @relation("messages_chat_context_id")
+}
+
+model messages {
+  id              String    @id @default(uuid())
+  created_at      DateTime? @default(now())
+  updated_at      DateTime? @updatedAt
+  chat_context_id String
+  query           String
+  response        String
+  feedback        String
+  comments        String
+
+  chat_context chat_context @relation("messages_chat_context_id", fields: [chat_context_id], references: [id])
+}

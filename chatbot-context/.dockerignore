@@ -1,0 +1,9 @@
+packages/chatbot/node_modules/**/*
+packages/chatbot/node_modules
+packages/chatbot-context/node_modules/**/*
+packages/chatbot-context/node_modules
+
+packages/chatbot/.next/**/*
+packages/chatbot/.next
+packages/chatbot-context/.next/**/*
+packages/chatbot-context/.next

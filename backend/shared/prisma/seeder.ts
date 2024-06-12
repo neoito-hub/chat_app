@@ -8,11 +8,11 @@ import addVendor from './seeder/vendor_seed.ts'
 const prisma = new PrismaClient()
 
 async function main() {
-  addContact(prisma)
-  addProject(prisma)
-  addTemplateCategory(prisma)
-  addTemplateLang(prisma)
-  addVendor(prisma)
+  // addContact(prisma)
+  // addProject(prisma)
+  // addTemplateCategory(prisma)
+  // addTemplateLang(prisma)
+  // addVendor(prisma)
 }
 
 main()

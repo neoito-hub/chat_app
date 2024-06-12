@@ -1,13 +1,15 @@
 
 # Chat APP
 
-This project introduces a chat functionality that supports multiple mediums. The app facilitates chat via WhatsApp using the WhatsApp Cloud API and enables bidirectional communication through Centrifugo.
+This project introduces a chat functionality that supports multiple mediums. The app facilitates chat via WhatsApp using the WhatsApp Cloud API and enables bidirectional communication through Centrifugo. It also features AI-assisted messaging.
 
 ## Components
 
 1. **Backend**: The backend component comprises APIs responsible for managing chat-related functionalities.
 
-2. **Authentication Shield**: Ensures secure access to the chat app system by implementing robust authentication mechanisms to protect sensitive user data and system functionalities.
+2. **chatbot-context**: For generating AI responses using a trained model, with the ability to upload a data source.
+
+3. **Authentication Shield**: Ensures secure access to the chat app system by implementing robust authentication mechanisms to protect sensitive user data and system functionalities.
 
 ## Prerequisites
 
